@@ -1,0 +1,82 @@
+<body ng-app="">
+	<div ng-controller="ExampleController">
+		<!-- main -->
+		<div class="main-w3layouts wrapper">
+			<h1>Creative SignUp Form</h1>
+			<div class="main-agileinfo">
+				<div class="agileits-top">
+					<form action="#" method="post" name="myForm">
+						<input id="name" name="name" type="text" class="form-control" placeholder="Username" required minlength="4" [(ngModel)]="username"
+							#name="ngModel">
+							<div *ngIf="usernameBusy">
+								Username is already busy
+							</div>
+
+						<div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
+							<div *ngIf="name.errors.required">
+								Name is required.
+							</div>
+							<div *ngIf="name.errors.minlength">
+								Name must be at least 4 characters long.
+							</div>
+						</div>
+						<input id="email" name="email" type="email" placeholder="E-mail" class="form-control" required minlength="4"
+							pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" [(ngModel)]="email" #Email="ngModel">
+						<div *ngIf="Email.invalid  && (Email.dirty || Email.touched)" class="alert alert-danger">
+							<div *ngIf="Email.errors.required">
+								Email is required.
+							</div>
+							<div *ngIf="Email.errors.pattern">
+								Provide correct email
+							</div>
+						</div>
+						<input id="phone" name="phone" type="text" placeholder="Phone-number format:432634265" class="form-control" required
+							pattern="[0-9]{9}" [(ngModel)]="phone" #Phone="ngModel">
+						<div *ngIf="Phone.invalid  && (Phone.dirty || Phone.touched)" class="alert alert-danger">
+							<div *ngIf="Phone.errors.required">
+								Phone is required.
+							</div>
+							<div *ngIf="Phone.errors.pattern">
+								Provide correct phone. Format: 123-456-789
+							</div>
+						</div>
+						<input id="password" name="password" class="form-control" placeholder="Password" required minlength="4" type="password"
+							[(ngModel)]="password" #pass="ngModel">
+						<div *ngIf="pass.invalid && (pass.dirty || pass.touched)" class="alert alert-danger">
+							<div *ngIf="pass.errors.required">
+								Password is required.
+							</div>
+							<div *ngIf="pass.errors.minlength">
+								Password must be at least 4 characters long.
+							</div>
+						</div>
+						<br>
+						<div class="wthree-text">
+							<div class="clear"> </div>
+						</div>
+						<input type="submit" *ngIf="!name.errors?.required&&!name.errors?.minlength&&
+									!pass.errors?.required&&!pass.errors?.minlength&&
+									!Email.errors?.required&&!Email.errors?.pattern
+									&&!Phone.errors?.required&&!Phone.errors?.pattern" 
+									(click)="createPerson()" value="Register">
+
+					</form>
+					<p> <a href="http://localhost:4200/login"> Login Now!</a></p>
+				</div>
+			</div>
+		</div>
+		<ul class="colorlib-bubbles">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+	<!-- //main -->
+</body>

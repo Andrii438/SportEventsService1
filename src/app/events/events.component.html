@@ -1,0 +1,24 @@
+<html>
+<p *ngIf= "alreadySigned" class="bg-danger"> You are already subscribed</p>
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>description</th>
+            <th>Target Date</th>
+            <th>Available places</th>
+            <th> Organizer phone number</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let event of events">
+            <td>{{event.id}}</td>
+            <td>{{event.type}}</td>
+            <td>{{event.dateEvent| date:'short'}}</td>
+            <td>{{event.places}}</td>
+            <td>{{event.organizerPhone}}</td>
+            <td><button class="btn btn-success" (click)="signUp2(event.id)">Sign up</button></td>
+        </tr>
+    </tbody>
+</table>
+</html>

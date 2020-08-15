@@ -1,0 +1,16 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th>description</th>
+            <th>Target Date</th>
+            <th>Available places</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let event of events">
+            <td>{{event.type}}</td>
+            <td>{{event.dateEvent| date:'short'}}</td>
+            <td>{{event.places}}</td>
+        </tr>
+    </tbody>
+</table>
