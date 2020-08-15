@@ -1,27 +1,2 @@
-# SportEvents
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.1.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Ten projekt jest zrobiony z wykorzystaniem technologii: Angular, Java, Spring, Hibernate i Postgres, REST. Dla uruchomienia projektu trzeba pobrać folder z Java projektem i osobno z angular foldery i pliki. I do kompilacji javy plików jest potrzebny IDE z kompilatorem Javy conajmniej 14 wersji, i też w pliku applikation.properties ustawić login i hasło do lokalnej BD.  Do kompilacji plików Angular trzeba posiadać IDE z kompilatorem TS poleceniem ng serve. I po skompilowaniu obu projektów należy uruchomić przeglądarkę "http://localhost:4200/".
+Dany projekt jest stworzony dla tworzenia i zapisanie się na sportowe wydarzenia. W projekcie są dostępne następne opcje: zarejestrownie użytkownika, logowanie, wylogowanie, dodanie wydarzeń, zapis na wydazenie i wypis z wydarzenia.
